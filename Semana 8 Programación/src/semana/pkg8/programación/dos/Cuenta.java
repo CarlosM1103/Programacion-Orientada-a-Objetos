@@ -35,17 +35,13 @@ class Cuenta {
         if (cantidad > 0) {
             saldo += cantidad;
             System.out.println("Se ingresaron $" + cantidad + " a la cuenta.");
-        } else {
-            System.out.println("Cantidad inválida.");
-        }
+        } 
     }
 
     public void cambiarTitular(String nuevoTitular) {
         if (nuevoTitular != null && !nuevoTitular.trim().isEmpty()) {
             titular = nuevoTitular;
             System.out.println("Titular actualizado correctamente.");
-        } else {
-            System.out.println("Nombre inválido. No se realizó el cambio.");
-        }
+        } 
     }
 }
