@@ -8,6 +8,11 @@ package semana.pkg8.programación.dos;
  *
  * @author utpl
  */
-public class cta_ahorros {
+public class CuentaAhorro extends Cuenta {
+
+    public CuentaAhorro(String titular, double saldo) {
+        super(titular, saldo);
+        this.intereses = 0.05;
+    }
     
 }
