@@ -1,0 +1,80 @@
+# Super clase
+class Recurso:
+    def _init_(self, autor, titulo, fecha_publicacion):
+        self.autor = autor
+        self.titulo = titulo
+        self.fecha_publicacion = fecha_publicacion
+
+    def mostrarFicha(self):
+        print(f"Autor: {self.autor}")
+        print(f"Título: {self.titulo}")
+        print(f"Fecha de Publicación: {self.fecha_publicacion}")
+
+# Subclase Libro
+class Libro(Recurso):
+    def _init_(self, autor, titulo, fecha_publicacion, isbn, numero_impresiones):
+        super()._init_(autor, titulo, fecha_publicacion)
+        self.isbn = isbn
+        self.numero_impresiones = numero_impresiones
+
+    def mostrarFicha(self):
+        super().mostrarFicha()
+        print(f"ISBN: {self.isbn}")
+        print(f"Número de Impresiones: {self.numero_impresiones}")
+
+# Subclase Revista
+class Revista(Recurso):
+    def _init_(self, autor, titulo, fecha_publicacion, numero_edicion, url_revista):
+        super()._init_(autor, titulo, fecha_publicacion)
+        self.numero_edicion = numero_edicion
+        self.url_revista = url_revista
+
+    def mostrarFicha(self):
+        super().mostrarFicha()
+        print(f"Número de Edición: {self.numero_edicion}")
+        print(f"URL de la Revista: {self.url_revista}")
+
+# Subclase Tesis
+class Tesis(Recurso):
+    def _init_(self, autor, titulo, fecha_publicacion, universidad, fecha_disertacion):
+        super()._init_(autor, titulo, fecha_publicacion)
+        self.universidad = universidad
+        self.fecha_disertacion = fecha_disertacion
+
+    def mostrarFicha(self):
+        super().mostrarFicha()
+        print(f"Universidad: {self.universidad}")
+        print(f"Fecha de Disertación: {self.fecha_disertacion}")
+
+# Metodo principal
+def main():
+    print(" Ingreso de datos para un libro ")
+    autor = input("Autor: ")
+    titulo = input("Título: ")
+    fecha = input("Fecha de publicación: ")
+    isbn = input("ISBN: ")
+    impresiones = input("Número de impresiones: ")
+    libro = Libro(autor, titulo, fecha, isbn, impresiones)
+
+    print("\n Ingreso de datos para una revista ")
+    autor = input("Autor: ")
+    titulo = input("Título: ")
+    fecha = input("Fecha de publicación: ")
+    edicion = input("Número de edición: ")
+    url = input("URL de la revista: ")
+    revista = Revista(autor, titulo, fecha, edicion, url)
+
+    print("\n Ingreso de datos para una TESIS ")
+    autor = input("Autor: ")
+    titulo = input("Título: ")
+    fecha = input("Fecha de publicación: ")
+    universidad = input("Universidad: ")
+    fecha_disertacion = input("Fecha de disertación: ")
+    tesis = Tesis(autor, titulo, fecha, universidad, fecha_disertacion)
+
+    print("\n FICHA DEL LIBRO ")
+    libro.mostrarFicha()
+    print("\n FICHA DE LA REVISTA ")
+    revista.mostrarFicha()
+    print("\n FICHA DE LA TESIS ")
+    tesis.mostrarFicha()
