@@ -36,7 +36,7 @@ public class Tesis extends Recurso {
 
     @Override
     public String toString() {
-        return "Tesis{" + "universidad=" + universidad + ", fecha=" + fecha + super.toString() + '}';
+        return "Tesis = " + " universidad: " + universidad + " , fecha: " + fecha + super.toString() + '}';
     }
     
     

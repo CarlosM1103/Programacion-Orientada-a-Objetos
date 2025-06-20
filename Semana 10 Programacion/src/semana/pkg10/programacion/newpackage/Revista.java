@@ -36,7 +36,7 @@ public class Revista extends Recurso {
 
     @Override
     public String toString() {
-        return "Revista{" + "numEdicion=" + numEdicion + ", url=" + url + super.toString() + '}';
+        return "Revista = " + " numEdicion: " + numEdicion + " , url: " + url + super.toString() + '}';
     }
     
     

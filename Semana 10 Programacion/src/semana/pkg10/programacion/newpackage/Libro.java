@@ -37,7 +37,7 @@ public class Libro extends Recurso  {
     
     @Override
     public String toString() {
-        return "Libro{" + "ISBN=" + ISBN + ", impresiones=" + impresiones + super.toString() +'}';
+        return "Libro = " + " ISBN: " + ISBN + " , impresiones: " + impresiones + super.toString() +'}';
     }
     
     

@@ -46,6 +46,6 @@ public class Recurso {
     
     @Override
     public String toString() {
-        return "Recurso{" + "Autor=" + Autor + ", Titulo=" + Titulo + ", Fecha=" + Fecha + '}';
+        return " | Recurso = " + " Autor: " + Autor + " , Titulo: " + Titulo + " , Fecha: " + Fecha + '}';
     }
 }

@@ -4,8 +4,10 @@
  */
 package semana.pkg10.programacion.newpackage;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
+import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  *
@@ -13,22 +15,25 @@ import java.util.List;
  */
 public class Principal {
 
+    static Stack<String> elementos = new Stack<>();
+    static Queue<String> cola = new LinkedList<>();
+
     public static void main(String[] args) {
 
-        Recurso libro1 = new Libro(12, 123, "Carlos", "Tundayme", 16);
-        Recurso revista1 = new Revista(12,"Revista.com", "Carlos", "Tundayme", 16);
-        Recurso tesis1 = new Tesis("UTPL", 123, "Carlos", "Tundayme", 16);
+        Scanner leer = new Scanner(System.in);
 
+        Recurso libro1 = new Libro(12, 52435, "Alexa", "Libro", 21);
+        Recurso revista1 = new Revista(12, "Revista.com", "Carlos", "Revista", 16);
+        Recurso tesis1 = new Tesis("UTPL", 123, "Mateo", "Tesis", 12);
 
-        List<Recurso> lista = new ArrayList<>();
-        lista.add(libro1);
-        lista.add(revista1);
-        lista.add(tesis1);
-        
-        
-        for (Recurso p : lista) {
-            System.out.println(p.toString());
-        }
+        /* System.out.println("Ingrese el ISBN del Libro");
+        ((Libro)libro1).setISBN(1212); */
+        cola.add(libro1.toString() + "\n");
+        cola.add(revista1.toString() + "\n");
+        cola.add(tesis1.toString());
+
+        System.out.println(cola);
+
     }
 
 }
